@@ -1,4 +1,5 @@
-import Cabecalho from "./Cabecalho/Cabecalho";
+import Cabecalho from "./components/Cabecalho/Cabecalho";
+import Exemplo from "./components/Exemplo/Exemplo"
 
 export default function App() {
 
@@ -11,6 +12,7 @@ export default function App() {
     <div>
       <h1>Componente App</h1>
       <Cabecalho paginaProps={pagina} nrPaginaProps={nrPagina} statusProps={status} avisoProps={aviso}/>
+      <Exemplo name={"Victor"} outroAlerta={()=> alert("Atenção")}/> 
     </div>
   );
 }
