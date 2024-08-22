@@ -1,7 +1,10 @@
+type CabecalhoProps = {
+    tituloProps:string;
+    avisoProps:()=> void;
+}
 
 
-
-export default function Cabecalho({tituloProps,avisoProps}:{tituloProps:string, avisoProps:Function}) {
+export default function Cabecalho({tituloProps,avisoProps}: CabecalhoProps) {
 
     document.title = tituloProps
 
