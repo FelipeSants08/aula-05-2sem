@@ -3,6 +3,7 @@ import Cabecalho from "./Cabecalho/Cabecalho";
 export default function App() {
 
   const titulo:string = "Minha página principal!";
+  const aviso = () => alert(titulo);
   // const numero:number = 2;
   // const listaDeNomes:string[] = ["João", "Maria", "Pedro"];
   // const listaDeNomes2:[string,number,string] = ["João", 1, "Pedro"];
@@ -13,7 +14,7 @@ export default function App() {
   return(
     <div>
       <h1>Componente App</h1>
-      <Cabecalho tituloProps={titulo}/>
+      <Cabecalho tituloProps={titulo} avisoProps={aviso}/>
     </div>
   );
 }
