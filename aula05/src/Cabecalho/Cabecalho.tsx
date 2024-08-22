@@ -1,10 +1,22 @@
-export default function Cabecalho(props:{tituloProps:string}){
+type CabecalhoProps = {
+    paginaProps:string; 
+    nrPaginaProps:number | string;
+    statusProps: "loading" | "deployed"
+    avisoProps:()=> void;
+}
 
-    document.title = props.tituloProps;
+export default function Cabecalho({paginaProps,nrPaginaProps,statusProps,avisoProps}:CabecalhoProps){
 
+    document.title = statusProps+ " - "+nrPaginaProps;
+    
+    
     return(
         <header>
-            <h1>{props.tituloProps}</h1>
+            <h1>{paginaProps+ " - "+nrPaginaProps}</h1>
+            <div>
+                <button onClick={()=> avisoProps()}>Aviso do pai</button>
+            </div>
+        
         </header>
     );
 }
