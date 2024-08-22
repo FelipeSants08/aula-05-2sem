@@ -2,13 +2,15 @@ import Cabecalho from "./Cabecalho/Cabecalho";
 
 export default function App(){
 
-  const titulo:string = "Minha página principal!";
-  const aviso = ()=> alert(titulo);
+  const pagina:string = "Minha página principal!";
+  const nrPagina:string = "DOIS";
+  const status = "xuxu";
+  const aviso = ()=> alert(pagina);
 
   return (
     <div>
       <h1>Componente App</h1>
-      <Cabecalho tituloProps={titulo} avisoProps={aviso}/>
+      <Cabecalho paginaProps={pagina} nrPaginaProps={nrPagina} statusProps={status} avisoProps={aviso}/>
     </div>
   );
 }
