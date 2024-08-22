@@ -10,11 +10,12 @@ export default function App() {
  //const objeto: {nome:string,idade:number} = {nome: "João", idade: 25}
   //const objeto2: {nome:string,idade:number, isEstudante?: boolean} = {nome: "Maria", idade:30, isEstudante:true}
   //const elementoDiv: HTMLDivElement = document.createElement('div')
+  const aviso = ()=> alert(titulo);
 
   return (
     <div>
       <h1>Componete App</h1>
-      <Cabecalho tituloProps={titulo}/>
+      <Cabecalho tituloProps={titulo} avisoProps={aviso}/>
     </div>
   )
 }
