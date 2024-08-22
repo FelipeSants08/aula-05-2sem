@@ -7,11 +7,12 @@ export default function App(){
   // const listaDeNomes2:[string,number,string] = ["joao", 5, "nelson"];
   // const objeto:{nome:string,idade:number} = {nome: "maria",idade:20};
   // const objeto2:{nome:string,idade?:number} = {nome: "maria"};
+  const aviso = ()=> alert(titulo);
 
   return(
     <div>
       <h1>Componente APP</h1>
-      <Cabecalho tituloProps={titulo}/>
+      <Cabecalho tituloProps={titulo} avisoProps={aviso}/>
     </div>
   );
 }
