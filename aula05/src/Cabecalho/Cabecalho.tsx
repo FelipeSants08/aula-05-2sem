@@ -1,7 +1,7 @@
 type CabecalhoProps = {
     paginaProps:string;
     nrPaginaProps:number | string;
-    statusProps: "loading" | "deployed";
+    statusProps: "loading" | "deployed" | "xuxu";
     avisoProps:(Function);
 }
 
