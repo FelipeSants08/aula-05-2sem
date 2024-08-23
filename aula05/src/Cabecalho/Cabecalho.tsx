@@ -1,15 +1,8 @@
-type CabecalhoProps = {
-    paginaProps:string;
-    nrPaginaProps:number | string // union - types
-    statusProps: "loading" | "deployed" | "xuxu"
-    avisoProps:Function;
-}
+import { Cabecalho1Props, Cabecalho2Props } from "../types";
 
-export default function Cabecalho({paginaProps, nrPaginaProps, statusProps, avisoProps}:CabecalhoProps) {
+export default function Cabecalho({paginaProps, nrPaginaProps, statusProps, avisoProps, children}: Cabecalho1Props & Cabecalho2Props) { // Intersection de tipos
     
     document.title = statusProps+ " - " + nrPaginaProps
-
-    // addEventListener("click", ()=> {})
 
     return(
         <header>
@@ -17,11 +10,12 @@ export default function Cabecalho({paginaProps, nrPaginaProps, statusProps, avis
             <div>
                 <button onClick={()=> avisoProps()}>Aviso do pai</button>
             </div>
+            <div>
+                {children}
+            </div>
         </header>
     );
 }
-
-
 
 
 // export default function Cabecalho(props:{tituloProps:string, avisoProps:Function}) {
