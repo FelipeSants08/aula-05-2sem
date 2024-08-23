@@ -1,12 +1,7 @@
-type CabecalhoProps = {
-    paginaProps:string;
-    nrPaginaProps: number | string;
-    statusProps: "loading"| "deployed";
-    avisoProps:()=> void;
-}
+import { CabecalhoProps } from "../types"
 
 
-export default function Cabecalho({paginaProps,nrPaginaProps,statusProps,avisoProps}: CabecalhoProps) {
+export default function Cabecalho({paginaProps,nrPaginaProps,statusProps,avisoProps,children}: CabecalhoProps) {
 
     document.title =statusProps + " - " + nrPaginaProps
 
@@ -25,6 +20,9 @@ export default function Cabecalho({paginaProps,nrPaginaProps,statusProps,avisoPr
         <h1>{paginaProps + " - " + nrPaginaProps}</h1>
         <div>
             <button onClick={()=> avisoProps()}>Aviso do pai</button>
+        </div>
+        <div>
+            {children}
         </div>
         {/* <div>
             <p>Nome: {nome}</p>
