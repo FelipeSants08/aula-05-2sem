@@ -1,18 +1,14 @@
+import { Cabecalho1Props, Cabecalho2Props } from "../types";
 
-type CabecalhoProps = {
-    tituloProps:string, 
-    avisoProps:Function
-}
+export default function Cabecalho({ paginaProps, nrPaginaProps, statusProps, avisoProps }: Cabecalho1Props & Cabecalho2Props) {
 
-export default function Cabecalho({tituloProps,avisoProps}:CabecalhoProps){
+    document.title = statusProps + " - " + nrPaginaProps;
 
-    document.title = tituloProps;
-
-    return(
+    return (
         <header>
-            <h1>{tituloProps}</h1>
+            <h1>{paginaProps + " - " + nrPaginaProps}</h1>
             <div>
-                <button onClick={()=> avisoProps()}>Aviso do pai</button>
+                <button onClick={() => avisoProps()}>Aviso do pai</button>
             </div>
         </header>
     );
